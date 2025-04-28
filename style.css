@@ -26,10 +26,62 @@ body{
     padding: 0 50px;
 }
 
+.nav {
+    position: relative;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
 .nav-part-1{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* Dropdown Styling */
+.nav-part-1 .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 800px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 100;
+    left: -200px; /* Adjust to center properly */
+    top: 40px; /* Position below the navbar item */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.dropdown-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.dropdown-column a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.dropdown-column a:hover {
+    color: #000;
 }
 
 .nav img{
@@ -180,4 +232,26 @@ body{
     bottom: 5%;
     font-weight: 600;
     text-transform: capitalize;
+}
+
+.contact-dropdown {
+    min-width: 400px; /* Smaller than other dropdowns since it has less content */
+    left: auto; /* Reset the left positioning */
+    right: 0; /* Align to the right since it's the last item */
+}
+
+.contact-dropdown p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact-dropdown a {
+    color: #666;
+    text-decoration: none;
+}
+
+.contact-dropdown a:hover {
+    color: #000;
+    text-decoration: underline;
 }
