@@ -227,6 +227,7 @@ body{
 }
 
 .price{
+    margin-left: 1.7%;
     font: 18px;
     position: absolute;
     bottom: 5%;
